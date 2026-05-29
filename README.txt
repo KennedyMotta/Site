@@ -1,0 +1,101 @@
+# 💼 Portfólio - Kennedy Motta
+
+Portfólio pessoal desenvolvido para apresentar minha trajetória como **designer formado em Comunicação Visual** e desenvolvedor em evolução como **fullstack**.
+
+O site reúne meus projetos, habilidades técnicas, trabalhos de motion design e informações de contato.
+
+## 🌐 Acesse o projeto
+
+https://kennedymotta.github.io/Site/
+
+## 📸 Preview
+
+![Preview do Portfólio](screenshot.png)
+
+---
+
+## 🧠 Sobre mim
+
+Sou formado em **Comunicação Visual / Design**, com experiência prática em **motion design, edição de vídeo e identidade visual**, além de atuação como **desenvolvedor fullstack em formação**.
+
+Tenho interesse em unir **criatividade visual + programação**, criando interfaces, sistemas e experiências interativas.
+
+---
+
+## 🚀 O que o site apresenta
+
+- Apresentação pessoal e profissional
+- Habilidades técnicas e criativas
+- Projetos de desenvolvimento e experimentos
+- Trabalhos de motion design (vídeos)
+- Links de contato e redes sociais
+
+---
+
+## 🎬 Trabalhos de Motion Design
+
+O portfólio inclui três peças principais de motion/edição:
+
+- Stories Biduchos Dog  
+- Stories Julia Modas  
+- Story promocional  
+
+Esses trabalhos foram produzidos com foco em **conteúdo para redes sociais, storytelling visual e edição dinâmica**.
+
+---
+
+## 💻 Projetos em destaque
+
+### Desenvolvimento
+- 🎯 Jogo do Número Secreto (JavaScript)
+- 🧠 Projetos de lógica e console (GitHub)
+- 🛒 Mini-Market em Lua
+- ❌⭕ Jogo da Velha
+- 🎵 Sound Screen em C#
+
+### Outros projetos
+- 🧩 Pokédex em React (interface visual)
+- 🎮 GameMaker (gameplay demonstrado)
+- 🧾 Script Roblox (automação/scripting)
+
+---
+
+## 🛠️ Tecnologias e habilidades
+
+### Front-end
+- HTML, CSS, JavaScript
+- Typescript, React
+
+### Back-end / Linguagens
+- PHP
+- Python
+- Java
+- C#
+- Lua
+- MySQL
+- Axios
+
+### Design & Motion
+- Adobe After Effects
+- Adobe Premiere
+- Photoshop
+- Illustrator
+- Motion design e edição de vídeo
+
+---
+
+## 🎯 Objetivo do projeto
+
+Este portfólio foi criado para unir minhas duas áreas principais:
+
+- **Design e comunicação visual**
+- **Desenvolvimento de software**
+
+Servindo como uma vitrine profissional dos meus trabalhos criativos e técnicos.
+
+---
+
+## 📬 Contato
+
+- LinkedIn: [https://www.linkedin.com/in/kennedy-da-silva-motta-409848308/](https://www.linkedin.com/in/kennedy-da-silva-motta-409848308/)  
+- Email: kennedymotta.kdsm@gmail.com
