@@ -1,0 +1,20 @@
+{
+  "liveServer.settings.port": 5501,
+  "CodeGPT.apiKey": "CodeGPT Plus",
+
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  "[html]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "prettier.requireConfig": false,
+  "prettier.useEditorConfig": true
+}
