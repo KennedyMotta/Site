@@ -36,7 +36,7 @@
         } catch (e) {}
     </script>
 
-    <link rel="stylesheet" href="css/style.css?v=16">
+    <link rel="stylesheet" href="css/style.css?v=17">
 </head>
 
 <body>
@@ -145,7 +145,10 @@
             <path
                 d="M17.32 5H6.68a4 4 0 0 0-3.98 3.59C2.6 9.42 2 14.46 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.41-1.41A2 2 0 0 1 9.83 16h4.34a2 2 0 0 1 1.41.59L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.54-.6-6.58-.69-7.26A4 4 0 0 0 17.32 5z" />
         </symbol>
-        <symbol id="i-replay" viewBox="0 0 24 24">
+        <symbol id="i-download" viewBox="0 0 24 24">
+            <path d="M12 15V3M7 10l5 5 5-5M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+        </symbol>
+
             <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
             <path d="M3 3v5h5" />
         </symbol>
@@ -230,7 +233,10 @@
 
                 <div class="hero-actions">
                     <a class="button button-primary" href="#projetos">Ver meus projetos</a>
-                    <a class="button button-secondary" href="#contato">Entre em contato</a>
+                    <a class="button button-secondary" href="docs/Kennedy-Motta-Curriculo-Desenvolvedor-Front-End.pdf" download>
+                        <svg class="icon" aria-hidden="true"><use href="#i-download"></use></svg>
+                        Baixar currículo
+                    </a>
 
                     <a class="icon-button icon-button-outline" href="https://github.com/KennedyMotta" target="_blank"
                         rel="noopener noreferrer" aria-label="GitHub">
@@ -275,7 +281,7 @@
 
                 <p>
                     Tenho conhecimentos em
-                    <strong>JavaScript, TypeScript, React, React Native, Java, Spring, C#, Python, PHP, Lua, HTML e
+                    <strong>JavaScript, TypeScript, React, Java, C#, Python, PHP, Lua, HTML e
                         CSS</strong>,
                     além de <strong>SQL, MySQL e Axios</strong>.
                     Busco minha
@@ -727,11 +733,10 @@
 
             <div class="skill-filters reveal" role="group" aria-label="Filtrar tecnologias por categoria">
                 <button type="button" class="skill-filter" data-filter="all" aria-pressed="true">Todas
-                    <span>22</span></button>
-                <button type="button" class="skill-filter" data-filter="front" aria-pressed="false">Front-end &amp;
-                    mobile <span>6</span></button>
+                    <span>20</span></button>
+                <button type="button" class="skill-filter" data-filter="front" aria-pressed="false">Front-end <span>5</span></button>
                 <button type="button" class="skill-filter" data-filter="back" aria-pressed="false">Back-end &amp; dados
-                    <span>7</span></button>
+                    <span>6</span></button>
                 <button type="button" class="skill-filter" data-filter="design" aria-pressed="false">Design &amp; vídeo
                     <span>4</span></button>
                 <button type="button" class="skill-filter" data-filter="tools" aria-pressed="false">Ferramentas &amp;
@@ -770,103 +775,91 @@
                             loading="lazy"></span>
                     <div class="hability-bar"></div>
                 </li>
-                <li class="hability-card reveal" data-category="front" style="--i: 5">
-                    <h4>React Native</h4>
-                    <span class="skill-badge"><img src="img/skills/reactnative.svg" alt="" width="88" height="88"
-                            loading="lazy"></span>
-                    <div class="hability-bar"></div>
-                </li>
-                <li class="hability-card reveal" data-category="back" style="--i: 6">
+                <li class="hability-card reveal" data-category="back" style="--i: 5">
                     <h4>Java</h4>
                     <span class="skill-badge"><img src="img/skills/java.svg" alt="" width="88" height="88"
                             loading="lazy"></span>
                     <div class="hability-bar"></div>
                 </li>
-                <li class="hability-card reveal" data-category="back" style="--i: 7">
-                    <h4>Spring</h4>
-                    <span class="skill-badge"><img src="img/skills/spring.svg" alt="" width="88" height="88"
-                            loading="lazy"></span>
-                    <div class="hability-bar"></div>
-                </li>
-                <li class="hability-card reveal" data-category="back" style="--i: 0">
+                <li class="hability-card reveal" data-category="back" style="--i: 6">
                     <h4>SQL / MySQL</h4>
                     <span class="skill-badge"><img src="img/skills/mysql.svg" alt="" width="88" height="88"
                             loading="lazy"></span>
                     <div class="hability-bar"></div>
                 </li>
-                <li class="hability-card reveal" data-category="back" style="--i: 1">
+                <li class="hability-card reveal" data-category="back" style="--i: 7">
                     <h4>Python</h4>
                     <span class="skill-badge"><img src="img/skills/python.svg" alt="" width="88" height="88"
                             loading="lazy"></span>
                     <div class="hability-bar"></div>
                 </li>
-                <li class="hability-card reveal" data-category="back" style="--i: 2">
+                <li class="hability-card reveal" data-category="back" style="--i: 0">
                     <h4>C#</h4>
                     <span class="skill-badge"><img src="img/skills/csharp.svg" alt="" width="88" height="88"
                             loading="lazy"></span>
                     <div class="hability-bar"></div>
                 </li>
-                <li class="hability-card reveal" data-category="back" style="--i: 3">
+                <li class="hability-card reveal" data-category="back" style="--i: 1">
                     <h4>PHP</h4>
                     <span class="skill-badge"><img src="img/skills/php.svg" alt="" width="88" height="88"
                             loading="lazy"></span>
                     <div class="hability-bar"></div>
                 </li>
-                <li class="hability-card reveal" data-category="back" style="--i: 4">
+                <li class="hability-card reveal" data-category="back" style="--i: 2">
                     <h4>Lua</h4>
                     <span class="skill-badge"><img src="img/skills/lua.svg" alt="" width="88" height="88"
                             loading="lazy"></span>
                     <div class="hability-bar"></div>
                 </li>
-                <li class="hability-card reveal" data-category="design" style="--i: 5">
+                <li class="hability-card reveal" data-category="design" style="--i: 3">
                     <h4>Photoshop</h4>
                     <span class="skill-badge"><img src="img/skills/photoshop.svg" alt="" width="88" height="88"
                             loading="lazy"></span>
                     <div class="hability-bar"></div>
                 </li>
-                <li class="hability-card reveal" data-category="design" style="--i: 6">
+                <li class="hability-card reveal" data-category="design" style="--i: 4">
                     <h4>Illustrator</h4>
                     <span class="skill-badge"><img src="img/skills/illustrator.svg" alt="" width="88" height="88"
                             loading="lazy"></span>
                     <div class="hability-bar"></div>
                 </li>
-                <li class="hability-card reveal" data-category="design" style="--i: 7">
+                <li class="hability-card reveal" data-category="design" style="--i: 5">
                     <h4>Premiere</h4>
                     <span class="skill-badge"><img src="img/skills/premierepro.svg" alt="" width="88" height="88"
                             loading="lazy"></span>
                     <div class="hability-bar"></div>
                 </li>
-                <li class="hability-card reveal" data-category="design" style="--i: 0">
+                <li class="hability-card reveal" data-category="design" style="--i: 6">
                     <h4>After Effects</h4>
                     <span class="skill-badge"><img src="img/skills/aftereffects.svg" alt="" width="88" height="88"
                             loading="lazy"></span>
                     <div class="hability-bar"></div>
                 </li>
-                <li class="hability-card reveal" data-category="tools" style="--i: 1">
+                <li class="hability-card reveal" data-category="tools" style="--i: 7">
                     <h4>Git</h4>
                     <span class="skill-badge"><img src="img/skills/git.svg" alt="" width="88" height="88"
                             loading="lazy"></span>
                     <div class="hability-bar"></div>
                 </li>
-                <li class="hability-card reveal" data-category="tools" style="--i: 2">
+                <li class="hability-card reveal" data-category="tools" style="--i: 0">
                     <h4>GitHub</h4>
                     <span class="skill-badge"><img src="img/skills/github.svg" alt="" width="88" height="88"
                             loading="lazy"></span>
                     <div class="hability-bar"></div>
                 </li>
-                <li class="hability-card reveal" data-category="tools" style="--i: 3">
+                <li class="hability-card reveal" data-category="tools" style="--i: 1">
                     <h4>Vite</h4>
                     <span class="skill-badge"><img src="img/skills/vitejs.svg" alt="" width="88" height="88"
                             loading="lazy"></span>
                     <div class="hability-bar"></div>
                 </li>
-                <li class="hability-card reveal" data-category="tools" style="--i: 4">
+                <li class="hability-card reveal" data-category="tools" style="--i: 2">
                     <h4>Axios</h4>
                     <span class="skill-badge"><img src="img/skills/axios.svg" alt="" width="88" height="88"
                             loading="lazy"></span>
                     <div class="hability-bar"></div>
                 </li>
-                <li class="hability-card reveal" data-category="tools" style="--i: 5">
+                <li class="hability-card reveal" data-category="tools" style="--i: 3">
                     <h4>APIs REST</h4>
                     <span class="skill-badge"><span class="skill-glyph" aria-hidden="true">{ }</span></span>
                     <div class="hability-bar"></div>
@@ -934,6 +927,10 @@
                     </svg>
                     GitHub
                 </a>
+                <a class="button button-ghost" href="docs/Kennedy-Motta-Curriculo-Desenvolvedor-Front-End.pdf" download>
+                    <svg class="icon" aria-hidden="true"><use href="#i-download"></use></svg>
+                    Currículo (PDF)
+                </a>
             </div>
         </div>
 
@@ -943,7 +940,7 @@
 
     </footer>
 
-    <script src="js/script.js?v=16"></script>
+    <script src="js/script.js?v=17"></script>
 
 </body>
 

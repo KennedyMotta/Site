@@ -36,9 +36,7 @@ desenvolvedor Fullstack em formação.
 - JavaScript
 - TypeScript
 - React
-- React Native
 - Java
-- Spring
 - C#
 - Python
 - PHP
