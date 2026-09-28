@@ -1,252 +1,286 @@
 <!DOCTYPE html>
-<html lang="pt-Br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/KennedyLogoFavIcon.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Kennedy Motta 😎</title>
+    <title>Kennedy Motta | Desenvolvedor Fullstack</title>
+    <meta name="description"
+        content="Portfólio de Kennedy Motta, desenvolvedor Fullstack em formação. Projetos com React, TypeScript e Java, além de design gráfico e edição de vídeo.">
+    <meta name="theme-color" content="#0b1220">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kennedymotta.github.io/Site/">
+    <meta property="og:title" content="Kennedy Motta | Desenvolvedor Fullstack em formação">
+    <meta property="og:description"
+        content="Projetos com React, TypeScript e Java, unindo código, design e criatividade.">
+    <meta property="og:image" content="https://kennedymotta.github.io/Site/img/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="img/brand/icon.ico?v=2" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/brand/icon-32.png?v=2">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/brand/icon-192.png?v=2">
+    <link rel="apple-touch-icon" href="img/brand/icon-180.png?v=2">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Tema escuro por padrão; aplica antes de desenhar a página (evita piscar) -->
+    <script>
+        document.documentElement.classList.add("js");
+        try {
+            if (localStorage.getItem("darkMode") !== "false") {
+                document.documentElement.classList.add("dark-mode");
+            }
+        } catch (e) {}
+    </script>
+
+    <link rel="stylesheet" href="css/style.css?v=16">
 </head>
 
 <body>
-    <header>
-        <nav class="nav-bar">
-            <div class="logo">
-                <h1 id="myNameHeader">&lt;KennedyMotta&gt;<span class="typing-cursor" aria-hidden="true">|</span></h1>
-            </div>
+    <!-- ÍCONES -->
+    <svg class="icon-sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <symbol id="i-menu" viewBox="0 0 24 24">
+            <path d="M3 6h18M3 12h18M3 18h18" />
+        </symbol>
+        <symbol id="i-close" viewBox="0 0 24 24">
+            <path d="M18 6 6 18M6 6l12 12" />
+        </symbol>
+        <symbol id="i-moon" viewBox="0 0 24 24">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </symbol>
+        <symbol id="i-sun" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="5" />
+            <path
+                d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+        </symbol>
+        <symbol id="i-github" viewBox="0 0 24 24">
+            <path
+                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+            <path d="M9 18c-4.51 2-5-2-7-2" />
+        </symbol>
+        <symbol id="i-linkedin" viewBox="0 0 24 24">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+            <rect width="4" height="12" x="2" y="9" />
+            <circle cx="4" cy="4" r="2" />
+        </symbol>
+        <symbol id="i-mail" viewBox="0 0 24 24">
+            <rect width="20" height="16" x="2" y="4" rx="2" />
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+        </symbol>
+        <symbol id="i-cap" viewBox="0 0 24 24">
+            <path
+                d="M21.42 10.92a1 1 0 0 0-.02-1.84L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.83l8.57 3.91a2 2 0 0 0 1.66 0z" />
+            <path d="M22 10v6M6 12.5V16a6 3 0 0 0 12 0v-3.5" />
+        </symbol>
+        <symbol id="i-pin" viewBox="0 0 24 24">
+            <path d="M20 10c0 4.99-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0" />
+            <circle cx="12" cy="10" r="3" />
+        </symbol>
+        <symbol id="i-palette" viewBox="0 0 24 24">
+            <circle cx="13.5" cy="6.5" r="1" />
+            <circle cx="17.5" cy="10.5" r="1" />
+            <circle cx="8.5" cy="7.5" r="1" />
+            <circle cx="6.5" cy="12.5" r="1" />
+            <path
+                d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.93 0 1.65-.75 1.65-1.69 0-.44-.18-.84-.44-1.13-.29-.29-.44-.65-.44-1.13a1.64 1.64 0 0 1 1.67-1.67h2c3.05 0 5.55-2.5 5.55-5.55C21.97 6.01 17.46 2 12 2z" />
+        </symbol>
+        <symbol id="i-video" viewBox="0 0 24 24">
+            <path d="m16 13 5.22 3.48a.5.5 0 0 0 .78-.42V7.87a.5.5 0 0 0-.75-.43L16 10.5" />
+            <rect x="2" y="6" width="14" height="12" rx="2" />
+        </symbol>
+        <symbol id="i-check" viewBox="0 0 24 24">
+            <path d="M20 6 9 17l-5-5" />
+        </symbol>
+        <symbol id="i-arrow" viewBox="0 0 24 24">
+            <path d="M7 7h10v10M7 17 17 7" />
+        </symbol>
+        <symbol id="i-code" viewBox="0 0 24 24">
+            <path d="m16 18 6-6-6-6M8 6l-6 6 6 6" />
+        </symbol>
+        <symbol id="i-plug" viewBox="0 0 24 24">
+            <path d="M12 22v-5M9 8V2M15 8V2M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z" />
+        </symbol>
+        <symbol id="i-layers" viewBox="0 0 24 24">
+            <path
+                d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z" />
+            <path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65M22 12.65l-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65" />
+        </symbol>
+        <symbol id="i-phone" viewBox="0 0 24 24">
+            <rect width="14" height="20" x="5" y="2" rx="2" />
+            <path d="M12 18h.01" />
+        </symbol>
+        <symbol id="i-rocket" viewBox="0 0 24 24">
+            <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
+            <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
+            <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+        </symbol>
+        <symbol id="i-braces" viewBox="0 0 24 24">
+            <path
+                d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5c0 1.1.9 2 2 2h1M16 21h1a2 2 0 0 0 2-2v-5c0-1.1.9-2 2-2a2 2 0 0 1-2-2V5a2 2 0 0 0-2-2h-1" />
+        </symbol>
+        <symbol id="i-search" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8" />
+            <path d="m21 21-4.3-4.3" />
+        </symbol>
+        <symbol id="i-terminal" viewBox="0 0 24 24">
+            <path d="m4 17 6-6-6-6M12 19h8" />
+        </symbol>
+        <symbol id="i-globe" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20" />
+        </symbol>
+        <symbol id="i-play" viewBox="0 0 24 24">
+            <path d="M6 3l14 9-14 9V3z" />
+        </symbol>
+        <symbol id="i-box" viewBox="0 0 24 24">
+            <path
+                d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z" />
+            <path d="M12 22V12M3.3 7l7.7 4.73a2 2 0 0 0 2 0L20.7 7M7.5 4.27l9 5.15" />
+        </symbol>
+        <symbol id="i-gamepad" viewBox="0 0 24 24">
+            <path d="M6 11h4M8 9v4M15 12h.01M18 10h.01" />
+            <path
+                d="M17.32 5H6.68a4 4 0 0 0-3.98 3.59C2.6 9.42 2 14.46 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.41-1.41A2 2 0 0 1 9.83 16h4.34a2 2 0 0 1 1.41.59L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.54-.6-6.58-.69-7.26A4 4 0 0 0 17.32 5z" />
+        </symbol>
+        <symbol id="i-replay" viewBox="0 0 24 24">
+            <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+            <path d="M3 3v5h5" />
+        </symbol>
+    </svg>
 
-            <div class="nav-list">
-                <ul>
-                    <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
-                    <li class="nav-item"><a href="#habilidades" class="nav-link">Habilidades</a></li>
-                    <li class="nav-item"><a href="#projetos" class="nav-link">Projetos</a></li>
-                    <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
-                </ul>
-            </div>
+    <header>
+        <nav class="nav-bar" aria-label="Navegação principal">
+            <a class="logo" href="#inicio" aria-label="Kennedy Motta, voltar ao início">
+                <span class="brand-mark" aria-hidden="true"></span>
+                <span class="logo-text">&lt;KennedyMotta&gt;<span class="typing-cursor"
+                        aria-hidden="true">|</span></span>
+            </a>
+
+            <ul class="nav-list">
+                <li><a href="#inicio" class="nav-link">Início</a></li>
+                <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                <li><a href="#projetos" class="nav-link">Projetos</a></li>
+                <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+                <li><a href="#criativos" class="nav-link">Criativos</a></li>
+                <li><a href="#contato" class="nav-link">Contato</a></li>
+            </ul>
 
             <div class="nav-controls">
-                <button id="darkModeToggle">
-                    <img src="img/moon.svg" alt="Ativar modo noturno">
+                <button class="icon-button" id="darkModeToggle" type="button" aria-label="Ativar modo noturno">
+                    <svg class="icon" aria-hidden="true">
+                        <use href="#i-moon"></use>
+                    </svg>
                 </button>
 
-                <div class="mobile-menu-icon">
-                    <button onclick="menuShow()">
-                        <img class="icon" src="img/Menu.svg" alt="Abrir menu">
-                    </button>
-                </div>
+                <button class="icon-button mobile-menu-button" id="menuToggle" type="button" aria-label="Abrir menu"
+                    aria-expanded="false" aria-controls="mobileMenu">
+                    <svg class="icon" aria-hidden="true">
+                        <use href="#i-menu"></use>
+                    </svg>
+                </button>
             </div>
         </nav>
 
-        <div class="mobile-menu">
+        <div class="mobile-menu" id="mobileMenu">
             <ul>
-                <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
-                <li class="nav-item"><a href="#habilidades" class="nav-link">Habilidades</a></li>
-                <li class="nav-item"><a href="#projetos" class="nav-link">Projetos</a></li>
-                <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
+                <li><a href="#inicio" class="nav-link">Início</a></li>
+                <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                <li><a href="#projetos" class="nav-link">Projetos</a></li>
+                <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+                <li><a href="#criativos" class="nav-link">Criativos</a></li>
+                <li><a href="#contato" class="nav-link">Contato</a></li>
             </ul>
         </div>
     </header>
 
-    <main class="mainContent">
+    <main>
 
-        <section>
-            <div class="mainContentDiv">
+        <!-- HERO -->
+        <section class="hero" id="inicio">
 
-                <div class="words">
-                    <div class="words1">
+            <div class="hero-text">
+                <span class="hero-kicker">Olá, eu sou</span>
 
-                        <span class="hero-kicker">Olá, eu sou</span>
+                <h1>Kennedy da Silva Motta</h1>
 
-                        <h1>Kennedy da Silva Motta</h1>
+                <h2>Desenvolvedor <strong>Fullstack</strong> em formação.</h2>
 
-                        <h2>Desenvolvedor <strong>Fullstack</strong> em formação.</h2>
-
-                        <p>
-                            Transformo ideias em projetos práticos combinando código,
-                            design e criatividade.
-                        </p>
-
-                        <div class="hero-actions">
-                            <a class="hero-button hero-button-primary" href="#projetos">
-                                Ver meus projetos
-                            </a>
-
-                            <a class="hero-button hero-button-secondary" href="#contato">
-                                Entre em contato
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="hero-portrait">
-                    <div class="hero-portrait-glow"></div>
-
-                    <img src="img/MeNewPhoto.jpeg" alt="Foto de Kennedy da Silva Motta">
-
-                    <span class="hero-status">
-                        <span class="status-dot" aria-hidden="true"></span>
-                        Disponível
-                    </span>
-                </div>
-
-            </div>
-        </section>
-
-        <div id="downArrowDiv">
-            <img src="img/seta.gif" width="130px" alt="Continue para a próxima seção">
-        </div>
-
-        <section>
-
-            <div class="section2">
                 <p>
-                    Com minhas <b>habilidades</b> hoje busco unir a programação
-                    aos meus <b>criativos!</b>
+                    Transformo ideias em projetos práticos combinando código,
+                    design e criatividade.
                 </p>
-            </div>
 
-            <div class="videoss2">
+                <ul class="hero-meta">
+                    <li>
+                        <svg class="icon" aria-hidden="true">
+                            <use href="#i-cap"></use>
+                        </svg>
+                        Ciência da Computação · último ano · UNISUL
+                    </li>
+                    <li>
+                        <svg class="icon" aria-hidden="true">
+                            <use href="#i-pin"></use>
+                        </svg>
+                        Porto Alegre/RS – Palhoça/SC
+                    </li>
+                </ul>
 
-                <video class="s2-video" src="Videos/Storie Biduchos Dog.mp4" width="23%" height="23%"
-                    alt="StoriesBiduchos" poster="img/capavideo1.jpg" controls>
-                </video>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#projetos">Ver meus projetos</a>
+                    <a class="button button-secondary" href="#contato">Entre em contato</a>
 
-                <video class="s2-video" src="Videos/Storie Julia Modas.mp4" width="23%" height="23%"
-                    alt="StorieJuliaModas" poster="img/capavideo2.jpg" controls>
-                </video>
-
-                <video class="s2-video" src="Videos/Storie Promo.mp4" width="23%" height="23%"
-                    alt="StorieJuliaModasPromo" poster="img/capavideo3.jpg" controls>
-                </video>
-
-            </div>
-
-        </section>
-
-        <section id="habilidades">
-
-            <div class="s3header">
-
-                <div class="habilities">
-
-                    <div class="hability-card">
-                        <h2>Design</h2>
-                        <img src="img/AdobeSoftwares.png" alt="Adobe Softwares">
-                        <div class="hability-bar"></div>
-                    </div>
-
-                    <div class="hability-card">
-                        <h2>Edição de Vídeo</h2>
-                        <img src="img/After Effects e Premiere.png" alt="After Effects e Premiere">
-                        <div class="hability-bar"></div>
-                    </div>
-
-                    <div class="hability-card">
-                        <h2>HTML, CSS & JavaScript</h2>
-                        <img src="img/HtmlCssJs.png" alt="HTML CSS JavaScript">
-                        <div class="hability-bar"></div>
-                    </div>
-
-                    <div class="hability-card">
-                        <h2>React</h2>
-                        <img src="img/React.png" alt="React">
-                        <div class="hability-bar"></div>
-                    </div>
-
-                    <div class="hability-card">
-                        <h2>Java</h2>
-                        <img src="img/Java.png" alt="Java">
-                        <div class="hability-bar"></div>
-                    </div>
-
-                    <div class="hability-card">
-                        <h2>Python</h2>
-                        <img src="img/Python.png" alt="Python">
-                        <div class="hability-bar"></div>
-                    </div>
-
-                    <div class="hability-card">
-                        <h2>C#</h2>
-                        <img src="img/c.png" alt="C#">
-                        <div class="hability-bar"></div>
-                    </div>
-
-                    <div class="hability-card">
-                        <h2>PHP</h2>
-                        <img src="img/php.png" alt="PHP">
-                        <div class="hability-bar"></div>
-                    </div>
-
-                    <div class="hability-card">
-                        <h2>Lua</h2>
-                        <img src="img/Lua.png" alt="Lua">
-                        <div class="hability-bar"></div>
-                    </div>
-
+                    <a class="icon-button icon-button-outline" href="https://github.com/KennedyMotta" target="_blank"
+                        rel="noopener noreferrer" aria-label="GitHub">
+                        <svg class="icon" aria-hidden="true">
+                            <use href="#i-github"></use>
+                        </svg>
+                    </a>
+                    <a class="icon-button icon-button-outline"
+                        href="https://www.linkedin.com/in/kennedy-da-silva-motta-409848308/" target="_blank"
+                        rel="noopener noreferrer" aria-label="LinkedIn">
+                        <svg class="icon" aria-hidden="true">
+                            <use href="#i-linkedin"></use>
+                        </svg>
+                    </a>
                 </div>
+            </div>
 
+            <div class="hero-portrait">
+                <div class="hero-portrait-glow"></div>
+
+                <img src="img/MeNewPhoto.jpeg" alt="Foto de Kennedy da Silva Motta" width="250" height="250">
+
+                <span class="hero-status">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    Aberto a oportunidades
+                </span>
             </div>
 
         </section>
 
-        <section class="section3">
+        <a class="scroll-cue" href="#sobre" aria-label="Continue para a próxima seção">
+            <img src="img/seta.gif" width="110" alt="">
+        </a>
 
-            <div class="section3text">
+        <!-- SOBRE MIM -->
+        <section class="about reveal" id="sobre">
 
+            <div class="about-text">
                 <span class="section-kicker">Sobre mim</span>
 
-                <h2>
-                    Sou um desenvolvedor <strong>em formação.</strong>
-                </h2>
+                <h2>Sou um desenvolvedor <strong>em formação.</strong></h2>
 
                 <p>
                     Tenho conhecimentos em
-                    <strong>JavaScript, TypeScript, React, Java, C#, Python, PHP, HTML e CSS</strong>,
-                    além de tecnologias como <strong>MySQL e Axios</strong>.
+                    <strong>JavaScript, TypeScript, React, React Native, Java, Spring, C#, Python, PHP, Lua, HTML e
+                        CSS</strong>,
+                    além de <strong>SQL, MySQL e Axios</strong>.
                     Busco minha
                     <strong>primeira oportunidade profissional na área de desenvolvimento</strong>
                     e venho construindo projetos para aprimorar minhas habilidades na prática.
-                </p>
-
-                <p>
-                    Entre os projetos que desenvolvi estão:
-                </p>
-
-                <div class="projects-list">
-
-                    <p>
-                        <strong>Movie Search</strong> —
-                        Java • HttpClient • Gson • API REST
-                    </p>
-
-                    <p>
-                        <strong>ScreenSound</strong> — C#
-                    </p>
-
-                    <p>
-                        <strong>Pokédex</strong> —
-                        React • TypeScript • Vite • API REST
-                    </p>
-
-                    <p>
-                        <strong>Todo List</strong> —
-                        TypeScript • HTML • CSS • Vite
-                    </p>
-
-                    <p>
-                        <strong>Box Hunters</strong> —
-                        Roblox • Lua
-                    </p>
-
-                </div>
-
-                <p>
-                    Dentre outros projetos e estudos disponíveis no meu
-                    <a href="https://github.com/KennedyMotta" target="_blank" rel="noopener noreferrer">
-                        <strong>GitHub</strong>
-                    </a>.
                 </p>
 
                 <p>
@@ -255,131 +289,661 @@
                     utilizando ferramentas como
                     <strong>Photoshop, Illustrator, Premiere e After Effects</strong>.
                 </p>
+            </div>
 
+            <ul class="about-highlights">
+                <li>
+                    <span class="about-icon"><svg class="icon" aria-hidden="true">
+                            <use href="#i-cap"></use>
+                        </svg></span>
+                    <span>
+                        <strong>Ciência da Computação</strong>
+                        UNISUL · último ano (desde 2023)
+                    </span>
+                </li>
+                <li>
+                    <span class="about-icon"><svg class="icon" aria-hidden="true">
+                            <use href="#i-palette"></use>
+                        </svg></span>
+                    <span>
+                        <strong>Comunicação Visual</strong>
+                        IFSC · formado em 2022
+                    </span>
+                </li>
+                <li>
+                    <span class="about-icon"><svg class="icon" aria-hidden="true">
+                            <use href="#i-video"></use>
+                        </svg></span>
+                    <span>
+                        <strong>Design e vídeo</strong>
+                        Freelancer em design gráfico e edição de vídeo
+                    </span>
+                </li>
+            </ul>
+
+        </section>
+
+        <!-- PROJETOS -->
+        <section class="projects" id="projetos">
+
+            <div class="section-head reveal">
+                <span class="section-kicker">Projetos</span>
+                <h2>Projetos em destaque</h2>
+                <p>
+                    Aplicações que construí para colocar em prática o que estudo, todas com código aberto no GitHub.
+                </p>
+            </div>
+
+            <!-- Pokédex -->
+            <article class="showcase showcase-pokedex showcase-dark reveal">
+
+                <div class="showcase-info">
+                    <div class="showcase-heading">
+                        <span class="pokedex-lights" aria-hidden="true"><i class="lens"></i><i></i><i></i><i></i></span>
+                        <div>
+                            <span class="project-badge">Destaque · Front-end</span>
+                            <h3>Pokédex</h3>
+                        </div>
+                    </div>
+
+                    <p>
+                        Pokédex interativa e responsiva para pesquisar Pokémon por nome ou número,
+                        com sprites animadas e dados da PokéAPI, em uma interface inspirada em um
+                        videogame portátil.
+                    </p>
+
+                    <ul class="stack" aria-label="Tecnologias">
+                        <li><img src="img/skills/react.svg" alt="" width="20" height="20">React</li>
+                        <li><img src="img/skills/typescript.svg" alt="" width="20" height="20">TypeScript</li>
+                        <li><img src="img/skills/vitejs.svg" alt="" width="20" height="20">Vite</li>
+                        <li><img src="img/skills/axios.svg" alt="" width="20" height="20">Axios</li>
+                    </ul>
+
+
+                    <div class="showcase-actions">
+                        <a class="button button-primary" href="https://kennedymotta.github.io/pokedex/" target="_blank"
+                            rel="noopener noreferrer">
+                            Abrir em nova aba
+                            <svg class="icon" aria-hidden="true">
+                                <use href="#i-arrow"></use>
+                            </svg>
+                        </a>
+                        <a class="button button-secondary" href="https://github.com/KennedyMotta/pokedex"
+                            target="_blank" rel="noopener noreferrer">
+                            <svg class="icon" aria-hidden="true">
+                                <use href="#i-github"></use>
+                            </svg>
+                            Ver código
+                        </a>
+                    </div>
+                </div>
+
+                <div class="showcase-stage">
+                    <div class="browser" data-live-demo>
+                        <div class="browser-bar">
+                            <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                            <span class="browser-url">kennedymotta.github.io/pokedex</span>
+                            <span class="browser-live" aria-hidden="true">Ao vivo</span>
+                        </div>
+
+                        <div class="browser-stage">
+                            <img src="img/Pokedex.jpg" alt="Pokédex exibindo os dados e a sprite do Charizard"
+                                width="950" height="589" loading="lazy">
+
+                            <button class="poke-start" type="button" data-src="https://kennedymotta.github.io/pokedex/"
+                                data-title="Pokédex ao vivo" aria-label="Ligar a Pokédex ao vivo aqui na página">
+                                <span class="poke-start-tag">Demo interativa</span>
+                                <span class="pokeball" aria-hidden="true">
+                                    <span class="pokeball-top"></span>
+                                    <span class="pokeball-bottom"></span>
+                                    <span class="pokeball-button"></span>
+                                </span>
+                                <span class="poke-start-text">
+                                    <strong>Press start</strong>
+                                    <small>Toque na Pokébola e teste a Pokédex aqui mesmo</small>
+                                </span>
+                            </button>
+                            <span class="poke-flash" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="showcase-points">
+                    <li>
+                        <span class="point-icon"><svg class="icon" aria-hidden="true">
+                                <use href="#i-plug"></use>
+                            </svg></span>
+                        <strong>API REST</strong>
+                        <small>PokéAPI consumida com Axios em serviços tipados.</small>
+                    </li>
+                    <li>
+                        <span class="point-icon"><svg class="icon" aria-hidden="true">
+                                <use href="#i-layers"></use>
+                            </svg></span>
+                        <strong>React + TypeScript</strong>
+                        <small>Componentes tipados e estado centralizado.</small>
+                    </li>
+                    <li>
+                        <span class="point-icon"><svg class="icon" aria-hidden="true">
+                                <use href="#i-phone"></use>
+                            </svg></span>
+                        <strong>Responsivo</strong>
+                        <small>Pensado para desktop e mobile.</small>
+                    </li>
+                    <li>
+                        <span class="point-icon"><svg class="icon" aria-hidden="true">
+                                <use href="#i-rocket"></use>
+                            </svg></span>
+                        <strong>Deploy automático</strong>
+                        <small>Build com Vite via GitHub Actions.</small>
+                    </li>
+                </ul>
+
+            </article>
+
+            <!-- Box Hunters -->
+            <article class="showcase showcase-reverse showcase-game showcase-dark reveal">
+
+                <div class="showcase-info">
+                    <div class="showcase-heading">
+                        <span class="game-crates" aria-hidden="true"><i></i><i></i><i></i></span>
+                        <div>
+                            <span class="project-badge">Destaque · Game</span>
+                            <h3>Box Hunters</h3>
+                        </div>
+                    </div>
+
+                    <p>
+                        Preparando o lançamento do meu jogo para a plataforma Roblox.
+                        Um sneak peek do projeto que estou preparando atualmente.
+                    </p>
+
+                    <ul class="stack" aria-label="Tecnologias">
+                        <li><img src="img/skills/lua.svg" alt="" width="20" height="20">Lua</li>
+                        <li>Roblox Studio</li>
+                    </ul>
+
+                    <div class="game-progress">
+                        <span>Em desenvolvimento</span>
+                        <div class="game-progress-bar" aria-hidden="true"><i></i></div>
+                    </div>
+
+                    <ul class="showcase-points">
+                        <li>
+                            <span class="point-icon"><svg class="icon" aria-hidden="true">
+                                    <use href="#i-code"></use>
+                                </svg></span>
+                            <strong>Lua (Luau)</strong>
+                            <small>Lógica do jogo programada em Lua.</small>
+                        </li>
+                        <li>
+                            <span class="point-icon"><svg class="icon" aria-hidden="true">
+                                    <use href="#i-box"></use>
+                                </svg></span>
+                            <strong>Roblox Studio</strong>
+                            <small>Mundo e sistemas montados no Studio.</small>
+                        </li>
+                        <li>
+                            <span class="point-icon"><svg class="icon" aria-hidden="true">
+                                    <use href="#i-gamepad"></use>
+                                </svg></span>
+                            <strong>Interface do jogo</strong>
+                            <small>HUD com moedas, gemas, nível e itens.</small>
+                        </li>
+                        <li>
+                            <span class="point-icon"><svg class="icon" aria-hidden="true">
+                                    <use href="#i-rocket"></use>
+                                </svg></span>
+                            <strong>Lançamento</strong>
+                            <small>Em breve na plataforma Roblox.</small>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="showcase-stage">
+                    <a class="game-screen" href="https://www.linkedin.com/feed/update/urn:li:activity:7496301402600919040/" target="_blank" rel="noopener noreferrer"
+                        aria-label="Ver mais do Box Hunters no LinkedIn">
+                        <picture>
+                            <source srcset="img/BoxHunters.webp" type="image/webp">
+                            <img src="img/BoxHuntersGif.gif" alt="Sneak peek do Box Hunters" width="800" height="450"
+                                loading="lazy">
+                        </picture>
+                        <span class="game-live" aria-hidden="true">Sneak peek</span>
+                    </a>
+                    <div class="showcase-actions game-actions">
+                        <a class="button button-primary" href="https://www.linkedin.com/feed/update/urn:li:activity:7496301402600919040/" target="_blank" rel="noopener noreferrer">
+                            <svg class="icon" aria-hidden="true"><use href="#i-linkedin"></use></svg>
+                            Ver mais do jogo no LinkedIn
+                            <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
+                        </a>
+                    </div>
+                </div>
+
+            </article>
+
+            <!-- Movie Search CLI -->
+            <article class="showcase showcase-cli showcase-dark reveal">
+
+                <div class="showcase-info">
+                    <div class="showcase-heading">
+                        <span class="clapper" aria-hidden="true"><i></i><i></i></span>
+                        <div>
+                            <span class="project-badge">Destaque · Back-end</span>
+                            <h3><span class="prompt" aria-hidden="true">&gt;_</span> Movie Search CLI</h3>
+                        </div>
+                    </div>
+
+                    <p>
+                        Aplicação de linha de comando em Java que consome a API OMDb para buscar filmes,
+                        ver detalhes e explorar os resultados de forma interativa.
+                    </p>
+
+                    <ul class="stack" aria-label="Tecnologias">
+                        <li><img src="img/skills/java.svg" alt="" width="20" height="20">Java</li>
+                        <li>HttpClient</li>
+                        <li>Gson</li>
+                        <li>API OMDb</li>
+                    </ul>
+
+                    <ul class="showcase-points">
+                        <li>
+                            <span class="point-icon"><svg class="icon" aria-hidden="true">
+                                    <use href="#i-globe"></use>
+                                </svg></span>
+                            <strong>HttpClient</strong>
+                            <small>Requisições HTTP nativas do Java.</small>
+                        </li>
+                        <li>
+                            <span class="point-icon"><svg class="icon" aria-hidden="true">
+                                    <use href="#i-braces"></use>
+                                </svg></span>
+                            <strong>Gson + DTOs</strong>
+                            <small>JSON convertido em objetos Java.</small>
+                        </li>
+                        <li>
+                            <span class="point-icon"><svg class="icon" aria-hidden="true">
+                                    <use href="#i-search"></use>
+                                </svg></span>
+                            <strong>3 tipos de busca</strong>
+                            <small>Lista, título exato ou IMDb ID.</small>
+                        </li>
+                        <li>
+                            <span class="point-icon"><svg class="icon" aria-hidden="true">
+                                    <use href="#i-terminal"></use>
+                                </svg></span>
+                            <strong>CLI interativa</strong>
+                            <small>Menu com validação de entrada.</small>
+                        </li>
+                    </ul>
+
+                    <div class="showcase-actions">
+                        <a class="button button-primary" href="https://github.com/KennedyMotta/movie-search-cli"
+                            target="_blank" rel="noopener noreferrer">
+                            <svg class="icon" aria-hidden="true">
+                                <use href="#i-github"></use>
+                            </svg>
+                            Ver código
+                        </a>
+                    </div>
+                </div>
+
+                <div class="showcase-stage">
+                    <div class="terminal" data-terminal>
+                        <div class="terminal-bar">
+                            <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                            <span class="terminal-title">movie-search-cli</span>
+                            <button class="terminal-replay" type="button">
+                                <svg class="icon" aria-hidden="true">
+                                    <use href="#i-replay"></use>
+                                </svg>
+                                Rodar de novo
+                            </button>
+                        </div>
+
+                        <div class="terminal-screen" role="img"
+                            aria-label="Demonstração no terminal: busca por título exato do filme Batman, que retorna Batman, 1989, Action, Adventure, 126 minutos.">
+                            <div class="t-line t-dim">----------------------------------------</div>
+                            <div class="t-line t-title"> CHOOSE SEARCH TYPE</div>
+                            <div class="t-line t-dim">----------------------------------------</div>
+                            <div class="t-line"> [1] Search movies (list)</div>
+                            <div class="t-line"> [2] Exact title</div>
+                            <div class="t-line"> [3] IMDb ID</div>
+                            <div class="t-line t-dim">----------------------------------------</div>
+                            <div class="t-line">👉 Enter your choice: <span class="t-input">2</span></div>
+                            <div class="t-line"> </div>
+                            <div class="t-line t-dim">----------------------------------------</div>
+                            <div class="t-line">🎥 Enter movie name: <span class="t-input">Batman</span></div>
+                            <div class="t-line"> </div>
+                            <div class="t-line t-wait">🔎 Searching...</div>
+                            <div class="t-line t-dim">----------------------------------------</div>
+                            <div class="t-line"> </div>
+                            <div class="t-line t-accent">==================================</div>
+                            <div class="t-line t-title"> RESULT</div>
+                            <div class="t-line t-accent">==================================</div>
+                            <div class="t-line t-result">Batman 1989 Action, Adventure 23 Jun 1989 126 min</div>
+                            <div class="t-line"> </div>
+                            <div class="t-line t-accent">======================================</div>
+                            <div class="t-line t-title"> SEARCH COMPLETE</div>
+                            <div class="t-line t-accent">======================================</div>
+                        </div>
+                    </div>
+                </div>
+
+            </article>
+
+            <!-- Outros projetos -->
+            <h3 class="subsection-title reveal">Outros projetos</h3>
+
+            <div class="project-grid">
+
+                <a class="project-card reveal" href="https://kennedymotta.github.io/InstaClone/" target="_blank"
+                    rel="noopener noreferrer">
+                    <span class="project-card-media">
+                        <img src="img/InstaClone.jpg" alt="Tela do InstaClone" width="1000" height="625" loading="lazy">
+                    </span>
+                    <span class="project-card-info">
+                        <strong>InstaClone</strong>
+                        <small>HTML • CSS <svg class="icon" aria-hidden="true">
+                                <use href="#i-arrow"></use>
+                            </svg></small>
+                    </span>
+                </a>
+
+                <a class="project-card reveal" href="https://kennedymotta.github.io/jogo-do-numero-secreto/"
+                    target="_blank" rel="noopener noreferrer">
+                    <span class="project-card-media">
+                        <img src="img/JogoNumeroSecreto-card.jpg" alt="Tela do Jogo do Número Secreto" width="1419"
+                            height="887" loading="lazy">
+                    </span>
+                    <span class="project-card-info">
+                        <strong>Jogo do Número Secreto</strong>
+                        <small>HTML • CSS • JavaScript <svg class="icon" aria-hidden="true">
+                                <use href="#i-arrow"></use>
+                            </svg></small>
+                    </span>
+                </a>
+
+                <a class="project-card reveal" href="https://github.com/KennedyMotta/first-todo-list-ts" target="_blank"
+                    rel="noopener noreferrer">
+                    <span class="project-card-media">
+                        <img src="img/To-doList ScreenShot.png" alt="Tela da Todo List" width="1263" height="790"
+                            loading="lazy">
+                    </span>
+                    <span class="project-card-info">
+                        <strong>Todo List</strong>
+                        <small>TypeScript • Vite <svg class="icon" aria-hidden="true">
+                                <use href="#i-arrow"></use>
+                            </svg></small>
+                    </span>
+                </a>
+
+            </div>
+
+            <div class="repo-grid">
+                <a class="repo-card reveal" href="https://github.com/KennedyMotta/Screen-Sound-Alura" target="_blank"
+                    rel="noopener noreferrer">
+                    <span class="repo-lang"><i style="--lang: #178600"></i>C#</span>
+                    <strong>ScreenSound</strong>
+                    <small>Simulador de plataforma de música, feito no curso da Alura.</small>
+                </a>
+
+                <a class="repo-card reveal" href="https://github.com/KennedyMotta/Lua-Mini-Market" target="_blank"
+                    rel="noopener noreferrer">
+                    <span class="repo-lang"><i style="--lang: #000080"></i>Lua</span>
+                    <strong>Lua Mini Market</strong>
+                    <small>Mini mercado feito para praticar a linguagem Lua.</small>
+                </a>
+
+                <a class="repo-card reveal"
+                    href="https://github.com/KennedyMotta/Java-Jogo-da-Velha-Simples-por-Console" target="_blank"
+                    rel="noopener noreferrer">
+                    <span class="repo-lang"><i style="--lang: #b07219"></i>Java</span>
+                    <strong>Jogo da Velha</strong>
+                    <small>Jogo da velha simples jogado pelo console.</small>
+                </a>
+            </div>
+
+            <a class="more-link reveal" href="https://github.com/KennedyMotta?tab=repositories" target="_blank"
+                rel="noopener noreferrer">
+                <svg class="icon" aria-hidden="true">
+                    <use href="#i-github"></use>
+                </svg>
+                Mais projetos e estudos no GitHub
+                <svg class="icon" aria-hidden="true">
+                    <use href="#i-arrow"></use>
+                </svg>
+            </a>
+
+        </section>
+
+        <!-- HABILIDADES -->
+        <section class="skills" id="habilidades">
+
+            <div class="section-head reveal">
+                <span class="section-kicker">Habilidades</span>
+                <h2>Tecnologias e ferramentas</h2>
+                <p>Do código ao design: o que uso nos meus projetos e estudos.</p>
+            </div>
+
+            <div class="skill-filters reveal" role="group" aria-label="Filtrar tecnologias por categoria">
+                <button type="button" class="skill-filter" data-filter="all" aria-pressed="true">Todas
+                    <span>22</span></button>
+                <button type="button" class="skill-filter" data-filter="front" aria-pressed="false">Front-end &amp;
+                    mobile <span>6</span></button>
+                <button type="button" class="skill-filter" data-filter="back" aria-pressed="false">Back-end &amp; dados
+                    <span>7</span></button>
+                <button type="button" class="skill-filter" data-filter="design" aria-pressed="false">Design &amp; vídeo
+                    <span>4</span></button>
+                <button type="button" class="skill-filter" data-filter="tools" aria-pressed="false">Ferramentas &amp;
+                    bibliotecas <span>5</span></button>
+                <span class="skill-filter-indicator" aria-hidden="true"></span>
+            </div>
+
+            <ul class="skill-cards">
+                <li class="hability-card reveal" data-category="front" style="--i: 0">
+                    <h4>HTML5</h4>
+                    <span class="skill-badge"><img src="img/skills/html5.svg" alt="" width="88" height="88"
+                            loading="lazy"></span>
+                    <div class="hability-bar"></div>
+                </li>
+                <li class="hability-card reveal" data-category="front" style="--i: 1">
+                    <h4>CSS3</h4>
+                    <span class="skill-badge"><img src="img/skills/css3.svg" alt="" width="88" height="88"
+                            loading="lazy"></span>
+                    <div class="hability-bar"></div>
+                </li>
+                <li class="hability-card reveal" data-category="front" style="--i: 2">
+                    <h4>JavaScript</h4>
+                    <span class="skill-badge"><img src="img/skills/javascript.svg" alt="" width="88" height="88"
+                            loading="lazy"></span>
+                    <div class="hability-bar"></div>
+                </li>
+                <li class="hability-card reveal" data-category="front" style="--i: 3">
+                    <h4>TypeScript</h4>
+                    <span class="skill-badge"><img src="img/skills/typescript.svg" alt="" width="88" height="88"
+                            loading="lazy"></span>
+                    <div class="hability-bar"></div>
+                </li>
+                <li class="hability-card reveal" data-category="front" style="--i: 4">
+                    <h4>React</h4>
+                    <span class="skill-badge"><img src="img/skills/react.svg" alt="" width="88" height="88"
+                            loading="lazy"></span>
+                    <div class="hability-bar"></div>
+                </li>
+                <li class="hability-card reveal" data-category="front" style="--i: 5">
+                    <h4>React Native</h4>
+                    <span class="skill-badge"><img src="img/skills/reactnative.svg" alt="" width="88" height="88"
+                            loading="lazy"></span>
+                    <div class="hability-bar"></div>
+                </li>
+                <li class="hability-card reveal" data-category="back" style="--i: 6">
+                    <h4>Java</h4>
+                    <span class="skill-badge"><img src="img/skills/java.svg" alt="" width="88" height="88"
+                            loading="lazy"></span>
+                    <div class="hability-bar"></div>
+                </li>
+                <li class="hability-card reveal" data-category="back" style="--i: 7">
+                    <h4>Spring</h4>
+                    <span class="skill-badge"><img src="img/skills/spring.svg" alt="" width="88" height="88"
+                            loading="lazy"></span>
+                    <div class="hability-bar"></div>
+                </li>
+                <li class="hability-card reveal" data-category="back" style="--i: 0">
+                    <h4>SQL / MySQL</h4>
+                    <span class="skill-badge"><img src="img/skills/mysql.svg" alt="" width="88" height="88"
+                            loading="lazy"></span>
+                    <div class="hability-bar"></div>
+                </li>
+                <li class="hability-card reveal" data-category="back" style="--i: 1">
+                    <h4>Python</h4>
+                    <span class="skill-badge"><img src="img/skills/python.svg" alt="" width="88" height="88"
+                            loading="lazy"></span>
+                    <div class="hability-bar"></div>
+                </li>
+                <li class="hability-card reveal" data-category="back" style="--i: 2">
+                    <h4>C#</h4>
+                    <span class="skill-badge"><img src="img/skills/csharp.svg" alt="" width="88" height="88"
+                            loading="lazy"></span>
+                    <div class="hability-bar"></div>
+                </li>
+                <li class="hability-card reveal" data-category="back" style="--i: 3">
+                    <h4>PHP</h4>
+                    <span class="skill-badge"><img src="img/skills/php.svg" alt="" width="88" height="88"
+                            loading="lazy"></span>
+                    <div class="hability-bar"></div>
+                </li>
+                <li class="hability-card reveal" data-category="back" style="--i: 4">
+                    <h4>Lua</h4>
+                    <span class="skill-badge"><img src="img/skills/lua.svg" alt="" width="88" height="88"
+                            loading="lazy"></span>
+                    <div class="hability-bar"></div>
+                </li>
+                <li class="hability-card reveal" data-category="design" style="--i: 5">
+                    <h4>Photoshop</h4>
+                    <span class="skill-badge"><img src="img/skills/photoshop.svg" alt="" width="88" height="88"
+                            loading="lazy"></span>
+                    <div class="hability-bar"></div>
+                </li>
+                <li class="hability-card reveal" data-category="design" style="--i: 6">
+                    <h4>Illustrator</h4>
+                    <span class="skill-badge"><img src="img/skills/illustrator.svg" alt="" width="88" height="88"
+                            loading="lazy"></span>
+                    <div class="hability-bar"></div>
+                </li>
+                <li class="hability-card reveal" data-category="design" style="--i: 7">
+                    <h4>Premiere</h4>
+                    <span class="skill-badge"><img src="img/skills/premierepro.svg" alt="" width="88" height="88"
+                            loading="lazy"></span>
+                    <div class="hability-bar"></div>
+                </li>
+                <li class="hability-card reveal" data-category="design" style="--i: 0">
+                    <h4>After Effects</h4>
+                    <span class="skill-badge"><img src="img/skills/aftereffects.svg" alt="" width="88" height="88"
+                            loading="lazy"></span>
+                    <div class="hability-bar"></div>
+                </li>
+                <li class="hability-card reveal" data-category="tools" style="--i: 1">
+                    <h4>Git</h4>
+                    <span class="skill-badge"><img src="img/skills/git.svg" alt="" width="88" height="88"
+                            loading="lazy"></span>
+                    <div class="hability-bar"></div>
+                </li>
+                <li class="hability-card reveal" data-category="tools" style="--i: 2">
+                    <h4>GitHub</h4>
+                    <span class="skill-badge"><img src="img/skills/github.svg" alt="" width="88" height="88"
+                            loading="lazy"></span>
+                    <div class="hability-bar"></div>
+                </li>
+                <li class="hability-card reveal" data-category="tools" style="--i: 3">
+                    <h4>Vite</h4>
+                    <span class="skill-badge"><img src="img/skills/vitejs.svg" alt="" width="88" height="88"
+                            loading="lazy"></span>
+                    <div class="hability-bar"></div>
+                </li>
+                <li class="hability-card reveal" data-category="tools" style="--i: 4">
+                    <h4>Axios</h4>
+                    <span class="skill-badge"><img src="img/skills/axios.svg" alt="" width="88" height="88"
+                            loading="lazy"></span>
+                    <div class="hability-bar"></div>
+                </li>
+                <li class="hability-card reveal" data-category="tools" style="--i: 5">
+                    <h4>APIs REST</h4>
+                    <span class="skill-badge"><span class="skill-glyph" aria-hidden="true">{ }</span></span>
+                    <div class="hability-bar"></div>
+                </li>
+            </ul>
+
+        </section>
+
+        <!-- CRIATIVOS -->
+        <section class="creatives" id="criativos">
+
+            <div class="creatives-phrase reveal">
+                <p>
+                    Com minhas <b>habilidades</b> hoje busco unir a programação
+                    aos meus <b>criativos!</b>
+                </p>
+            </div>
+
+            <div class="creatives-band reveal">
+                <video class="creative-video" src="Videos/Storie Biduchos Dog.mp4" poster="img/capavideo1.jpg"
+                    preload="none" controls playsinline aria-label="Story Biduchos Dog"></video>
+
+                <video class="creative-video" src="Videos/Storie Julia Modas.mp4" poster="img/capavideo2.jpg"
+                    preload="none" controls playsinline aria-label="Story Julia Modas"></video>
+
+                <video class="creative-video" src="Videos/Storie Promo.mp4" poster="img/capavideo3.jpg" preload="none"
+                    controls playsinline aria-label="Story Julia Modas Promo"></video>
             </div>
 
         </section>
 
     </main>
 
-    <!-- BOX HUNTERS -->
-    <section class="current-project" id="atual">
-
-        <div class="current-project-heading">
-
-            <span class="section-kicker">
-                Em desenvolvimento
-            </span>
-
-            <h2>Box Hunters</h2>
-
-            <p>
-                Preparando lançamento do meu jogo para a plataforma Roblox.
-            </p>
-
-            <p>
-                Um Sneak Peek do projeto que estou preparando atualmente.
-            </p>
-
-        </div>
-
-        <div class="current-project-video">
-
-            <img src="img/BoxHuntersGif.gif" alt="Sneak Peek do Box Hunters">
-
-        </div>
-
-    </section>
-
-    <!-- PROJETOS -->
-    <aside id="projetos" class="projects">
-
-        <h1>Projetos</h1>
-
-        <a class="project-card" href="https://kennedymotta.github.io/jogo-do-numero-secreto/" target="_blank"
-            rel="noopener noreferrer">
-
-            <img src="img/Jogo do Numero Secreto.png" alt="Tela do Jogo do Número Secreto">
-
-            <span class="project-card-info">
-
-                <strong>Jogo do Número Secreto</strong>
-
-                <small>
-                    HTML • CSS • JavaScript <b>↗</b>
-                </small>
-
-            </span>
-
-        </a>
-
-        <a class="project-card" href="https://github.com/KennedyMotta/first-todo-list-ts" target="_blank"
-            rel="noopener noreferrer">
-
-            <img src="img/To-doList ScreenShot.png" alt="Todo List">
-
-            <span class="project-card-info">
-
-                <strong>Todo List</strong>
-
-                <small>
-                    TypeScript • Vite <b>↗</b>
-                </small>
-
-            </span>
-
-        </a>
-
-        <a class="project-card" href="https://github.com/KennedyMotta/movie-search-cli" target="_blank"
-            rel="noopener noreferrer">
-
-            <img src="img/MovieSearch CLI.png" alt="Movie Search CLI">
-
-            <span class="project-card-info">
-
-                <strong>Movie Search CLI</strong>
-
-                <small>
-                    Java • API REST <b>↗</b>
-                </small>
-
-            </span>
-
-        </a>
-
-    </aside>
-
+    <!-- CONTATO -->
     <footer id="contato">
 
-        <h4 id="footertext">
-            Desenvolvido por @KennedyMotta
-        </h4>
+        <div class="contact-card contact-plain reveal">
+            <span class="section-kicker">Contato</span>
 
-        <span class="contactsLogosandRefs">
+            <h2>Vamos conversar?</h2>
 
-            <a href="https://www.linkedin.com/in/kennedy-da-silva-motta-409848308/" target="_blank" rel="external">
+            <p>
+                Estou em busca da minha primeira oportunidade como desenvolvedor.
+                Se você tem uma vaga, um projeto ou quer trocar uma ideia, me chama!
+            </p>
 
-                <img class="social-icon" id="linkh" src="img/LinkedinLogo.png" alt="LinkedIn">
+            <div class="contact-actions">
+                <a class="button button-light" href="mailto:Kennedymotta.kdsm@gmail.com">
+                    <svg class="icon" aria-hidden="true">
+                        <use href="#i-mail"></use>
+                    </svg>
+                    Kennedymotta.kdsm@gmail.com
+                </a>
+                <a class="button button-ghost" href="https://www.linkedin.com/in/kennedy-da-silva-motta-409848308/"
+                    target="_blank" rel="noopener noreferrer">
+                    <svg class="icon" aria-hidden="true">
+                        <use href="#i-linkedin"></use>
+                    </svg>
+                    LinkedIn
+                </a>
+                <a class="button button-ghost" href="https://github.com/KennedyMotta" target="_blank"
+                    rel="noopener noreferrer">
+                    <svg class="icon" aria-hidden="true">
+                        <use href="#i-github"></use>
+                    </svg>
+                    GitHub
+                </a>
+            </div>
+        </div>
 
-            </a>
-
-            <a href="https://github.com/kennedymotta" target="_blank" rel="external">
-
-                <img class="social-icon" id="gith" src="img/GithubLogo.png" alt="GitHub">
-
-            </a>
-
-            <a href="mailto:Kennedymotta.kdsm@gmail.com" target="_blank" rel="external">
-
-                <img class="social-icon" id="gmailh" src="img/Gmail.png" alt="Email">
-
-            </a>
-
-        </span>
+        <div class="footer-bar">
+            <p>Desenvolvido por @KennedyMotta</p>
+        </div>
 
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js?v=16"></script>
 
 </body>
 

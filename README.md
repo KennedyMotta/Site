@@ -36,7 +36,9 @@ desenvolvedor Fullstack em formação.
 - JavaScript
 - TypeScript
 - React
+- React Native
 - Java
+- Spring
 - C#
 - Python
 - PHP
@@ -51,7 +53,7 @@ desenvolvedor Fullstack em formação.
 
 ### 🔧 Outras tecnologias
 
-- MySQL
+- SQL / MySQL
 - Axios
 - Vite
 - APIs REST
@@ -61,6 +63,20 @@ desenvolvedor Fullstack em formação.
 ---
 
 ## 📂 Projetos
+
+### 🔴 Pokédex
+
+Pokédex interativa e responsiva que consome a PokéAPI, com busca por nome
+ou número e sprites animadas.
+
+**Tecnologias:** React • TypeScript • Vite • Axios
+
+### 📸 InstaClone
+
+Recriação da tela de login do Instagram com HTML e CSS puros, com foco em
+layout responsivo.
+
+**Tecnologias:** HTML • CSS
 
 ### 🎮 Box Hunters
 
